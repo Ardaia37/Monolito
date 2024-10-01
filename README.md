@@ -28,7 +28,7 @@ Crie um banco de dados MySQL para a aplicação usando o phpMyAdmin (ou qualquer
 3. Instalando dependências do PHP
 Navegue até o diretório do projeto e execute o comando abaixo para instalar as dependências do Laravel via Composer:
 
-bash
+```bash
 Copiar código
 cd monolito
 composer install
@@ -36,72 +36,80 @@ composer install
 3. Instalando dependências do PHP
 Navegue até o diretório do projeto e execute o comando abaixo para instalar as dependências do Laravel via Composer:
 
-bash
+```
 Copiar código
+```bash
 cd monolito
 composer install
+```
 4. Instalando dependências do Node.js
 Em seguida, instale as dependências de frontend com NPM:
 
-bash
+```bash
 Copiar código
 npm install
+```
 5. Configurando o ambiente
 Renomeie o arquivo .env.example para .env:
-bash
+```bash
 Copiar código
 cp .env.example .env
 Edite o arquivo .env para configurar o banco de dados que você criou:
 dotenv
+```
 Copiar código
+```bash
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
 DB_DATABASE=nome_do_banco
 DB_USERNAME=seu_usuario
 DB_PASSWORD=sua_senha
+```
 Gere a chave da aplicação Laravel:
-bash
+```bash
 Copiar código
 php artisan key:generate
+```
 6. Executando migrações e seeds
 Execute as migrações para criar as tabelas no banco de dados:
 
-bash
+
 Copiar código
+```bash
 php artisan migrate
+```
 Se você tiver seeds para popular o banco de dados com dados iniciais, execute:
 
-bash
+```bash
 Copiar código
 php artisan db:seed
+```
 7. Compilando assets
 Use o Laravel Mix para compilar os assets (CSS, JS, etc.):
 
-bash
+```bash
 Copiar código
 npm run dev
+```
 8. Rodando o servidor local
 Agora, você pode rodar o servidor de desenvolvimento do Laravel:
 
-bash
+```bash
 Copiar código
 php artisan serve
 Por padrão, o servidor estará disponível em http://127.0.0.1:8000.
+```
 
-Dicas
+##Dicas
 Certifique-se de que o XAMPP esteja rodando o Apache e MySQL antes de iniciar o servidor Laravel.
 Para um ambiente de produção, considere usar npm run prod em vez de npm run dev para otimizar os assets.
 Caso haja problemas com permissões de pastas, execute o seguinte comando:
-bash
+```bash
 Copiar código
 sudo chmod -R 775 storage
 sudo chmod -R 775 bootstrap/cache
-Licença
-Este projeto é open-source e está licenciado sob os termos da MIT License.
-
-javascript
-Copiar código
+```
 
 Licença
 Este projeto é open-source e está licenciado sob os termos da MIT License.
